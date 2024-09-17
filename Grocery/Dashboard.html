@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List Dashboard</title>
+    <link rel="stylesheet" href="Dashboardstyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <!-- Main content -->
+    <div class="container">
+        <h1>Grocery List Dashboard</h1>
+
+        <!-- Category Selection -->
+        <div class="category-dashboard">
+            <input type="text" id="search-bar" placeholder="Search products...">
+            <button class="category-btn" data-category="all">All</button>
+            <button class="category-btn" data-category="vegetables">Vegetables</button>
+            <button class="category-btn" data-category="fruits">Fruits</button>
+            <button class="category-btn" data-category="meat">Meat</button>
+            <button class="category-btn" data-category="snacks">Snacks</button>
+            <button id="add-item-btn" class="category-btn">Add New Item</button>
+        </div>
+        <!-- Carousel Section -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-wrapper" id="carousel-wrapper">
+                    <!-- Menu items -->
+                    <div class="menu-item" data-category="fruits">
+                        <div class="menu-item-content">
+                            <button class="remove-btn" data-id="1">X</button>
+                            <button class="edit-btn" data-id="1">Edit</button>
+                            <img src="image/Apple.png" alt="Apple" class="item-img" data-id="1">
+                            <h3>Apple</h3>
+                        </div>
+                        <div class="menu-item-details">
+                            <p>Brand: Brand A</p>
+                            <p>Price: $1.00</p>
+                            <p>Weight/Volume: 1 lb</p>
+                            <p>Quantity: 1</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="fruits">
+                        <div class="menu-item-content">
+                            <button class="remove-btn" data-id="2">X</button>
+                            <button class="edit-btn" data-id="2">Edit</button>
+                            <img src="image/banana.png" alt="Banana" class="item-img" data-id="2">
+                            <h3>Banana</h3>
+                        </div>
+                        <div class="menu-item-details">
+                            <p>Brand: Brand B</p>
+                            <p>Price: $0.30</p>
+                            <p>Weight/Volume: 1 lb</p>
+                            <p>Quantity: 1</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="vegetables">
+                        <div class="menu-item-content">
+                            <button class="remove-btn" data-id="3">X</button>
+                            <button class="edit-btn" data-id="3">Edit</button>
+                            <img src="image/carrot.png" alt="Carrot" class="item-img" data-id="3">
+                            <h3>Carrot</h3>
+                        </div>
+                        <div class="menu-item-details">
+                            <p>Brand: Brand C</p>
+                            <p>Price: $0.50</p>
+                            <p>Weight/Volume: 1 lb</p>
+                            <p>Quantity: 1</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="vegetables">
+                        <div class="menu-item-content">
+                            <button class="remove-btn" data-id="4">X</button>
+                            <button class="edit-btn" data-id="4">Edit</button>
+                            <img src="image/broccoli.png" alt="Broccoli" class="item-img" data-id="4">
+                            <h3>Broccoli</h3>
+                        </div>
+                        <div class="menu-item-details">
+                            <p>Brand: Brand D</p>
+                            <p>Price: $1.20</p>
+                            <p>Weight/Volume: 1 lb</p>
+                            <p>Quantity: 1</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="meat">
+                        <div class="menu-item-content">
+                            <button class="remove-btn" data-id="5">X</button>
+                            <button class="edit-btn" data-id="5">Edit</button>
+                            <img src="image/chicken.png" alt="Chicken" class="item-img" data-id="5">
+                            <h3>Chicken</h3>
+                        </div>
+                        <div class="menu-item-details">
+                            <p>Brand: Brand E</p>
+                            <p>Price: $5.00</p>
+                            <p>Weight/Volume: 1 lb</p>
+                            <p>Quantity: 1</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="meat">
+                        <div class="menu-item-content">
+                            <button class="remove-btn" data-id="6">X</button>
+                            <button class="edit-btn" data-id="6">Edit</button>
+                            <img src="image/meat.png" alt="Meat" class="item-img" data-id="6">
+                            <h3>Meat</h3>
+                        </div>
+                        <div class="menu-item-details">
+                            <p>Brand: Brand F</p>
+                            <p>Price: $5.00</p>
+                            <p>Weight/Volume: 1 lb</p>
+                            <p>Quantity: 1</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="snacks">
+                        <div class="menu-item-content">
+                            <button class="remove-btn" data-id="7">X</button>
+                            <button class="edit-btn" data-id="7">Edit</button>
+                            <img src="image/chips.png" alt="Chips" class="item-img" data-id="7">
+                            <h3>Chips</h3>
+                        </div>
+                        <div class="menu-item-details">
+                            <p>Brand: Brand G</p>
+                            <p>Price: $2.00</p>
+                            <p>Weight/Volume: 150g</p>
+                            <p>Quantity: 1</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="snacks">
+                        <div class="menu-item-content">
+                            <button class="remove-btn" data-id="8">X</button>
+                            <button class="edit-btn" data-id="8">Edit</button>
+                            <img src="image/chocolate.png" alt="Chocolate" class="item-img" data-id="8">
+                            <h3>Chocolate</h3>
+                        </div>
+                        <div class="menu-item-details">
+                            <p>Brand: Brand H</p>
+                            <p>Price: $2.00</p>
+                            <p>Weight/Volume: 150g</p>
+                            <p>Quantity: 1</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="snacks">
+                        <div class="menu-item-content">
+                            <button class="remove-btn" data-id="9">X</button>
+                            <button class="edit-btn" data-id="9">Edit</button>
+                            <img src="image/cookies.png" alt="Cookies" class="item-img" data-id="9">
+                            <h3>Cookies</h3>
+                        </div>
+                        <div class="menu-item-details">
+                            <p>Brand: Brand G</p>
+                            <p>Price: $1.50</p>
+                            <p>Weight/Volume: 200g</p>
+                            <p>Quantity: 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+  <!-- Popup Form -->
+  <div id="popup-form" class="popup"style="display: none;">
+    <div class="popup-content">
+        <span id="close-popup-btn" class="close-btn">&times;</span>
+        <h2>Add New Item</h2>
+        <form id="item-form" class="item-form">
+            <label for="item-name">Name:</label>
+            <input type="text" id="item-name" name="item-name" placeholder="Enter item name" required>
+
+            <label for="item-category">Category:</label>
+            <select id="item-category" name="item-category" required>
+                <option value="vegetables">Vegetables</option>
+                <option value="fruits">Fruits</option>
+                <option value="meat">Meat</option>
+                <option value="snacks">Snacks</option>
+            </select>
+
+            <label for="item-image">Insert Image:</label>
+            <input type="file" id="item-image" name="item-image" accept="image/*" required>
+
+            <label for="item-price">Price:</label>
+            <input type="number" id="item-price" name="item-price" step="0.01" placeholder="Enter price" required>
+
+            <button type="submit">Add Item</button>
+        </form>
+    </div>
+</div>
+
+
+ <!-- Popup Edit Form -->
+ <div id="edit-popup-form" class="popup">
+    <div class="popup-content">
+        <span id="close-edit-popup-btn" class="close-btn">&times;</span>
+        <h2>Edit Item</h2>
+        <form id="edit-item-form" class="item-form">
+            <input type="hidden" id="edit-item-id">
+            
+            <label for="edit-item-name">Name:</label>
+            <input type="text" id="edit-item-name" name="item-name" placeholder="Enter item name" required>
+
+            <label for="edit-item-category">Category:</label>
+            <select id="edit-item-category" name="item-category" required>
+                <option value="vegetables">Vegetables</option>
+                <option value="fruits">Fruits</option>
+                <option value="meat">Meat</option>
+                <option value="snacks">Snacks</option>
+            </select>
+
+            <label for="edit-item-image-file">Image:</label>
+            <input type="file" id="edit-item-image-file" name="item-image-file" accept="image/*">
+
+            <img id="existing-image" class="existing-image" alt="Current image" style="display: none; max-width: 100%; height: auto;">
+
+            <label for="edit-item-price">Price:</label>
+            <input type="number" id="edit-item-price" name="item-price" step="0.01" placeholder="Enter price" required>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+        <!-- Cart Section -->
+        <div class="cart-section">  
+            <h2>Your Cart</h2>
+            <ul id="cart-list"></ul>
+            <p>Total Price: $<span id="total-price">0.00</span></p>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+
+
+    <script src="Dashboard.js"></script>
+</body>
+</html>

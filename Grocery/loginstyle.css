@@ -1,0 +1,80 @@
+/* Body background gradient */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fbc2eb, #a6c0fe); /* Gradient background */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container for centering the form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px; /* Added padding to avoid content sticking to edges */
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+/* Form container styling */
+.form-container {
+    background-color: #fff;
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Increased max-width for more spacious forms */
+}
+
+/* Form elements styling */
+.form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* Increased margin for better readability */
+}
+
+.form-group input {
+    width: 100%;
+    max-width: 100%; /* Full width to fit the container */
+    padding: 12px; /* Increased padding for better user experience */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+}
+
+button {
+    width: 100%;
+    padding: 12px; /* Increased padding for better click area */
+    background-color: #3c4296;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-top: 15px; /* Adjusted margin for better spacing */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
